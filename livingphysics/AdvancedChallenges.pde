@@ -26,7 +26,7 @@ class UnzipChallenge extends Challenge {
   UnzipChallenge() {
     id = "unzip";
     title = "Unzip";
-    desc = "Split the ladder down the middle.";
+    desc = "Razdelite lestev po sredini.";
     min_reactions_required = 2;
   }
   void init()
@@ -169,7 +169,7 @@ class BuildGirderChallenge extends Challenge {
   BuildGirderChallenge() {
     id = "build_girder";
     title = "Build girder";
-    desc = "Build the rest of the girder.";
+    desc = "Zgradite preostali del nosilca.";
     min_reactions_required = 2;
   }
   void init()
