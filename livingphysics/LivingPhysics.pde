@@ -115,7 +115,7 @@ void setup()
   PFont my_font = createFont("SansSerif",32,true);
   textFont(my_font);
 
-  website_url = new String("https://github.com/timhutton/livingphysics");
+  website_url = new String("https://fafk0.github.io/kemija/");
 
   // show something while we load
   smooth();
