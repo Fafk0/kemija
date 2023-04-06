@@ -95,8 +95,8 @@ class LineChallenge extends Challenge
   LineChallenge() {
     id = "line";
     title = "Line";
-    desc = "Join all the atoms together in a line.";
-    desc2 = "The reaction needed is already provided for you, so just pull the atoms into place.";
+    desc = "Zdruzi vse atome skupaj v eno linijo.";
+    desc2 = "Potrebna reakcija je že zagotovljena, zato samo povlecite atome na svoje mesto.";
     allow_editing_of_reactions = false; // this is an intro level
   }
   void init()
@@ -130,8 +130,8 @@ class JoinChallenge extends Challenge {
   JoinChallenge() { 
     id = "join";
     title = "Join";
-    desc = "Join all the atoms together.";
-    desc2 = "To solve this challenge you will have to add one or more reactions. Hit the '+' button, then click on the reaction to edit it.";
+    desc = "Zdruzi vse atome skupaj v eno linijo.";
+    desc2 = "Za rešitev tega izziva boste morali dodati eno ali več reakcij. Pritisnite gumb '+' in nato kliknite reakcijo, da jo uredite.";
     min_reactions_required = 1;
   }
   void init()
@@ -159,7 +159,7 @@ class SurroundChallenge extends Challenge {
   SurroundChallenge() { 
     id = "surround";
     title = "Surround";
-    desc = "Join the six red atoms directly to the yellow atom.";
+    desc = "Povežite šest rdečih atomov neposredno z rumenim atomom.";
     min_reactions_required = 1;
   }
   void init()
@@ -195,8 +195,8 @@ class PairsChallenge extends Challenge {
   PairsChallenge() {
     id = "pairs";
     title = "Pairs";
-    desc = "Join all the atoms in red-green pairs.";
-    desc2 = "(You will need to change their state numbers.)";
+    desc = "Povežite vse atome v rdeče-zelene pare.";
+    desc2 = "(Morali boste spremeniti njihove številke.)";
     min_reactions_required = 1;
   }
   void init() 
@@ -283,7 +283,7 @@ class OneChallenge extends Challenge {
   OneChallenge() {
     id = "one";
     title = "One";
-    desc = "Put all the atoms into state 1";
+    desc = "Postavite vse atome v stanje 1";
     min_reactions_required = 3;
   }
   void init()
@@ -315,7 +315,7 @@ class LinkChallenge extends Challenge {
   LinkChallenge() {
     id = "link";
     title = "Link";
-    desc = "Make a chain to connect the two fixed atoms.";
+    desc = "Naredite verigo, da povežete dva fiksna atoma.";
     min_reactions_required = 2;
   }
   void init()
@@ -346,7 +346,7 @@ class SplitLadderChallenge extends Challenge {
   SplitLadderChallenge() {
     id="split_ladder";
     title = "Split ladder";
-    desc = "Split the ladder down the middle.";
+    desc = "Razdelite lestev po sredini.";
     min_reactions_required = 1;
   }
   void init()
@@ -440,7 +440,7 @@ class SignalChallenge extends Challenge {
   SignalChallenge() {
     id = "signal";
     title = "Signal";
-    desc = "Set all the atoms to state 2 by passing the signal down the molecule.";
+    desc = "Nastavite vse atome v stanje 2 s prenosom signala navzdol po molekuli.";
     desc2 = "Don't make or break any bonds.";
     min_reactions_required = 1;
   }
@@ -472,7 +472,7 @@ class SignalChallenge extends Challenge {
       if(!r.bonded_pre | !r.bonded_post)
       {
         cheating_detected = true;
-        cheating_message = "Only use reactions that leave the atoms bonded together. Try again.";
+        cheating_message = "Uporabljajte samo reakcije, pri katerih so atomi povezani. Poskusi ponovno.";
         return;
       }
     }
@@ -544,7 +544,7 @@ class AssemblyChallenge extends Challenge { // compare with how clathrin works
       if(r.bonded_pre | !r.bonded_post)
       {
         cheating_detected = true;
-        cheating_message = "You don't need to use reactions that break bonds. Try again.";
+        cheating_message = "Ni vam treba uporabljati reakcij, ki trgajo vezi. Poskusi ponovno.";
         return;
       }
     }
@@ -557,7 +557,7 @@ class CopyingChallenge extends Challenge {
   CopyingChallenge() {
     id = "copying";
     title = "Copying";
-    desc = "Bond a single matching color to each atom in the chain.";
+    desc = "Na vsak atom v verigi povežite eno ujemajočo se barvo.";
     min_reactions_required = 3;
   }
   void init()
@@ -601,8 +601,8 @@ class ExtendChallenge extends Challenge {
   ExtendChallenge() {
     id = "extend";
     title = "Extend";
-    desc = "Break some of the bonds to extend the chain far enough to bond the two green atoms together.";
-    desc2 = "But don't break the chain in two.";
+    desc = "Prekinite nekaj vezi, da podaljšate verigo dovolj daleč, da povežete dva zelena atoma skupaj.";
+    desc2 = "Vendar ne pretrgajte verige na dvoje.";
     min_reactions_required = 3;
   }
   void init()
@@ -635,7 +635,7 @@ class ExtendChallenge extends Challenge {
     if(getAllAtomsConnectedTo(atoms[0]).size()<atoms.length-1)
     {
       cheating_detected = true;
-      cheating_message = "The chain should be in one connected piece at all times. Try again.";
+      cheating_message = "Veriga naj bo ves čas povezana v enem kosu. Poskusi ponovno.";
       return;
     }
   }
@@ -652,7 +652,7 @@ class SqueezeChallenge extends Challenge { // (not currently using this one)
   SqueezeChallenge() {
     id = "squeeze";
     title = "Squeeze";
-    desc = "By pulling the green atom along the yellow track, squeeze the red atoms together.";
+    desc = "Z vlečenjem zelenega atoma po rumeni stezi stisnite rdeče atome skupaj.";
     desc2 = "";
   }
   void init() 
@@ -694,8 +694,8 @@ class RainbowChallenge extends Challenge {
   RainbowChallenge() {
     id = "rainbow";
     title = "Rainbow chains";
-    desc = "Join the atoms into five rainbow chains.";
-    desc2 = "Each chain should consist of six atoms: red, yellow, green, light blue, dark blue, purple, in that order.";
+    desc = "Povežite atome v pet mavričnih verig.";
+    desc2 = "Vsaka veriga mora biti sestavljena iz šestih atomov: rdeči, rumeni, zeleni, svetlo modri, temno modri, vijolični, v tem vrstnem redu.";
     min_reactions_required = 5;
   }
   void init() 
@@ -749,7 +749,7 @@ class FitChallenge extends Challenge {
   FitChallenge() {
     id = "fit";
     title = "Fit";
-    desc = "Glue the two pieces together to make a perfect hexagon, with all the bonds intact.";
+    desc = "Oba dela zlepite skupaj, da naredite popoln šesterokotnik, pri čemer bodo vse vezi nedotaknjene.";
     min_reactions_required = 6;
   }
   void init()
