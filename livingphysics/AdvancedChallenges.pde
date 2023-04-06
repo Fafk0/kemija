@@ -63,7 +63,7 @@ class InsertChallenge extends Challenge {
   InsertChallenge() {
     id = "insert";
     title = "Insert";
-    desc = "Insert a green atom into the middle of the chain, without breaking it";
+    desc = "V sredino verige vstavi zeleni atom, ne da bi ga prekinil";
     min_reactions_required = 3;
   }
   void init()
@@ -128,7 +128,7 @@ class ZipChallenge extends Challenge {
   ZipChallenge() {
     id = "zip";
     title = "Zip";
-    desc = "Zip the two strands together to complete the ladder.";
+    desc = "Oba pramena spnite skupaj, da dokončate lestev.";
     min_reactions_required = 2;
   }
   void init()
@@ -390,7 +390,7 @@ class PullingChallenge extends Challenge {
   PullingChallenge() {
     id = "pull";
     title = "Pull";
-    desc = "Pull the red atom along the track to connect it to the green atom.";
+    desc = "Povlecite rdeči atom po stezi, da ga povežete z zelenim atomom.";
     desc2 = "Keep the track intact.";
     min_reactions_required = 4;
   }
@@ -444,7 +444,7 @@ class PullingChallenge extends Challenge {
       if(!atoms[i].hasBondWith(atoms[i-1]))
       {
         cheating_detected = true;
-        cheating_message = "Keep the track intact at all times. Try again.";
+        cheating_message = "Naj bo steza ves čas nedotaknjena. Poskusi ponovno.";
         return;
       }
     }
@@ -460,7 +460,7 @@ class PullingChallenge extends Challenge {
             return; // OK
         }
         cheating_detected = true;
-        cheating_message = "The red atom should be directly attached to the track at all times. Try again.";
+        cheating_message = "Rdeči atom mora biti ves čas neposredno pritrjen na stezo. Poskusi ponovno.";
         return;
       }
     }
@@ -473,7 +473,7 @@ class ConcertinaChallenge extends Challenge {
   ConcertinaChallenge() {
     id = "concertina";
     title = "Concertina";
-    desc = "Fold the chain together and bond into a girder like the bottom section.";
+    desc = "Zložite verigo skupaj in jo povežite v nosilec, kot je spodnji del.";
     min_reactions_required = 4;
   }
   void init()
@@ -514,7 +514,7 @@ class ConcertinaChallenge extends Challenge {
     if(getAllAtomsConnectedTo(atoms[0]).size()<atoms.length)
     {
       cheating_detected = true;
-      cheating_message = "The chain should be in one connected piece at all times. Try again.";
+      cheating_message = "Veriga naj bo ves čas povezana v enem kosu. Poskusi ponovno.";
       return;
     }
   }
@@ -552,8 +552,8 @@ class LadderFromRungsChallenge extends Challenge {
   LadderFromRungsChallenge() {
     id = "rungs";
     title = "Rungs";
-    desc = "Assemble the ladder using the rungs provided.";
-    desc2 = "Can you do it without relying on pulling the atoms into place?";
+    desc = "Sestavite lestev s pomočjo priloženih prečk.";
+    desc2 = "Ali lahko to storite, ne da bi se zanašali na to, da boste atome potegnili na svoje mesto?";
     min_reactions_required = 4;
   }
   void init()
@@ -610,7 +610,7 @@ class LadderFromRungsChallenge extends Challenge {
       if(!atoms[i].hasBondWith(atoms[i+1]))
       {
         cheating_detected = true;
-        cheating_message = "The rungs should be intact at all times. Try again.";
+        cheating_message = "Prečke morajo biti ves čas nedotaknjene. Poskusi ponovno.";
         return;
       }
     }
@@ -623,8 +623,8 @@ class RollChallenge extends Challenge {
   RollChallenge() {
     id = "roll";
     title = "Roll";
-    desc = "Roll the red triangles to the opposite ends of the track.";
-    desc2 = "Keep the track and the triangles intact, and keep the triangles connected to the track.";
+    desc = "Rdeče trikotnike zavrtite na nasprotna konca steze.";
+    desc2 = "Naj trikotniki ostanejo nedotaknjeni, trikotniki pa naj bodo povezani s tirom.";
     min_reactions_required = 4;
   }
   void init()
@@ -721,7 +721,7 @@ class RollChallenge extends Challenge {
       if(!atoms[i].hasBondWith(atoms[i-1]))
       {
         cheating_detected = true;
-        cheating_message = "Keep the track intact at all times. Try again.";
+        cheating_message = "Naj bo steza ves čas nedotaknjena. Poskusi ponovno.";
         return;
       }
     }
@@ -742,7 +742,7 @@ class RollChallenge extends Challenge {
     if(!tri_a_connected || !tri_b_connected || !tri_c_connected || !tri_d_connected)
     {
       cheating_detected = true;
-      cheating_message = "Keep the red triangles connected to the blue track at all times. Try again.";
+      cheating_message = "Rdeči trikotniki naj bodo ves čas povezani z modro stezo. Poskusi ponovno.";
       return;
     }
   }
@@ -754,8 +754,8 @@ class FilterChallenge extends Challenge {
   FilterChallenge() {
     id = "filter";
     title = "Filter";
-    desc = "Move all the red and green atoms to different sides of the chain.";
-    desc2 = "Can you do it without relying on pulling the atoms into place?";
+    desc = "Premaknite vse rdeče in zelene atome na različne strani verige.";
+    desc2 = "Ali lahko to storite, ne da bi se zanašali na to, da boste atome potegnili na svoje mesto?";
     min_reactions_required = 19;
   }
   void init()
@@ -821,7 +821,7 @@ class FilterChallenge extends Challenge {
     if(!chain.contains(atoms[1]))
     {
       cheating_detected = true;
-      cheating_message = "Keep the chain connected at all times. Try again.";
+      cheating_message = "Veriga naj bo ves čas povezana. Poskusi ponovno.";
       return;
     }
   }
@@ -833,8 +833,8 @@ class PeristalsisChallenge extends Challenge {
   PeristalsisChallenge() {
     id = "peristalsis";
     title = "Peristalsis";
-    desc = "By opening and closing the 'rungs', move the green atom down through the blue tube into the lower area, and bond it to a red atom.";
-    desc2 = "No more than 3 rungs can be open at a time. (There are already 2 rungs open.)";
+    desc = "Z odpiranjem in zapiranjem 'prečk' premaknite zeleni atom navzdol skozi modro cev v spodnje območje in ga povežite z rdečim atomom.";
+    desc2 = "Hkrati ne smejo biti odprte več kot 3 stopnice. (Odprti sta že 2 prečki.)";
     min_reactions_required = 6;
   }
   void init()
@@ -941,7 +941,7 @@ class PeristalsisChallenge extends Challenge {
           if( (atoms[i].stuck && atoms[i].bonds.size()!=1) || (!atoms[i].stuck && atoms[i].bonds.size()!=2) )
           {
             cheating_detected = true;
-            cheating_message = "The yellow walls must remain intact. Try again.";
+            cheating_message = "Rumene stene morajo ostati nedotaknjene. Poskusi ponovno.";
             return;
           }
         }
@@ -951,7 +951,7 @@ class PeristalsisChallenge extends Challenge {
     if(n_rungs_broken>3)
     {
       cheating_detected = true;
-      cheating_message = "No more than 3 'rungs' should be open at any one time. Try again.";
+      cheating_message = "Naenkrat ne smejo biti odprte več kot 3 'stopnice'. Poskusi ponovno.";
       return;
     }
   }
@@ -963,8 +963,8 @@ class EatChallenge extends Challenge {
   EatChallenge() {
     id = "eat";
     title = "Eat";
-    desc = "Move all of the green atoms into the cell. Leave the blue atoms outside.";
-    desc2 = "Don't let the red atom out.";
+    desc = "Premakni vse zelene atome v celico. Pusti modre atome zunaj.";
+    desc2 = "Nespusti rdecega atoma ven.";
     min_reactions_required = 8;
   }
   void init() 
@@ -1045,8 +1045,8 @@ class MatchChallenge extends Challenge {
   MatchChallenge() {
     id = "match";
     title = "Match";
-    desc = "Without changing the states of the edge atoms or breaking the pair, bond each atom of the pair to its matching color on the edge.";
-    desc2 = "Can you get it to work reliably without having to pull the atoms into place?";
+    desc = "Ne da bi spremenili stanja robnih atomov ali prekinili par, povežite vsak atom para z njegovo ujemajočo se barvo na robu.";
+    desc2 = "Ali ga lahko pripravite do zanesljivega delovanja, ne da bi morali atome povleči na svoje mesto?";
     min_reactions_required = 8;
   }
   void init()
@@ -1135,8 +1135,8 @@ class MitosisChallenge extends Challenge {
   MitosisChallenge() {
     id = "mitosis";
     title = "Mitosis";
-    desc = "Divide the loop into two separate loops. Keep the red atoms inside.";
-    desc2 = "You can use the two state 2 atoms if you want.";
+    desc = "Zanko razdelite na dve ločeni zanki. Zadrži rdeče atome v sebi.";
+    desc2 = "Če želite, lahko uporabite dva atoma stanja 2.";
     min_reactions_required = 8;
   }
   void init() 
@@ -1217,7 +1217,7 @@ class MitosisChallenge extends Challenge {
     if(!red1_inside || !red2_inside)
     {
       cheating_detected = true;
-      cheating_message = "The two red atoms should be kept inside. Try again.";
+      cheating_message = "Dva rdeča atoma naj ostaneta notri. Poskusi ponovno.";
       return;
     }
   }
