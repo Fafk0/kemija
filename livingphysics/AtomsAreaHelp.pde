@@ -13,12 +13,12 @@ void showAtomsAreaHelp()
   float bottom = height-top;
   float internal_border = 5*pix;
   
-  String text_block1 = "These are 'atoms', bouncing around in a two-dimensional world. You can drag them around with your finger.\n\n"+
-    "Atoms can be one of six types, and have a 'state' - a number 0-9 that can change.\n\n"+
-    "Atoms can become bonded to others, or unbonded. Bonding and state changing happens through 'reactions'.\n\n"+
-    "A reaction occurs when two atoms with the appropriate color and state collide. The reaction that last occurred is shown at the bottom of the screen.\n\n"+
-    "Your job is to edit the reactions to make things happen. Hit the cog button to see the current challenge and to edit the reactions.\n\n"+
-    "Levels can often be solved by adding more reactions as needed and pulling things carefully into place but the most elegant solutions involve few reactions and don't rely on pulling.";
+  String text_block1 = "To so "atomi", ki poskakujejo v dvodimenzionalnem svetu. Lahko jih povlečete s prstom.\n\n"+
+    "Atomi so lahko ena od šestih vrst in imajo 'stanje' - število 0-9, ki se lahko spreminja.\n\n"+
+    "Atomi se lahko vežejo na druge ali pa se ne vežejo. Vezava in spreminjanje stanja se zgodita z 'reakcijami'.\n\n"+
+    "Do reakcije pride, ko trčita dva atoma z ustrezno barvo in stanjem. Zadnja reakcija je prikazana na dnu zaslona.\n\n"+
+    "Vaša naloga je urejanje reakcij, da se stvari zgodijo. Pritisnite gumb zobnika, da vidite trenutni izziv in uredite reakcije.\n\n"+
+    "Ravne je pogosto mogoče rešiti z dodajanjem več reakcij po potrebi in pazljivim vlečenjem stvari na svoje mesto, vendar najelegantnejše rešitve vključujejo malo reakcij in se ne zanašajo na vlečenje.";
   atoms_area_help_ok_button_rect = new Rect((left+right)/2-40*pix,bottom-90*pix,80*pix,80*pix);
   scroll_up_rect = new Rect(width-50*pix,0,50*pix,50*pix);
   scroll_down_rect = new Rect(width-50*pix,height-50*pix,50*pix,50*pix);
