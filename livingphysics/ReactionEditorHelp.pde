@@ -13,10 +13,10 @@ void showReactionEditorHelp()
   float bottom = height-top;
   float internal_border = 5*pix;
   
-  String text_block1= "This is the reaction editor. The reaction only applies to atoms with matching type and state, so change them as necessary.\n\n"+
-    "Click on an atom first, then on its new type or its new state number. Remember that an atom's type can never be changed.\n\n"+
-    "To bond two atoms together, click between the two atoms on the right so that a line appears between them. Make sure there is no bond between the two atoms on the left.\n\n"+
-    "To unbond two atoms, have them bonded before and unbonded afterwards.";
+  String text_block1= "To je urejevalnik reakcij. Reakcija velja samo za atome z ujemajočo se vrsto in stanjem, zato jih po potrebi spremenite.\n\n"+
+    "Najprej kliknite atom, nato njegovo novo vrsto ali novo številko stanja. Ne pozabite, da vrste atoma ni mogoče nikoli spremeniti.\n\n"+
+    "Če želite povezati dva atoma skupaj, kliknite med atomoma na desni, tako da se med njima pojavi črta. Prepričajte se, da med atomoma na levi ni nobene vezi.\n\n"+
+    "Če želite razvezati dva atoma, ju morate prej povezati in razvezati pozneje.";
   
   reaction_editor_help_ok_button_rect = new Rect((left+right)/2-40*pix,bottom-90*pix,80*pix,80*pix);
   scroll_up_rect = new Rect(width-50*pix,0,50*pix,50*pix);
